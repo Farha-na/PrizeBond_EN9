@@ -1,0 +1,55 @@
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vscode/
+*.vs/
+
+# Rider / JetBrains
+.idea/
+
+# Logs
+*.log
+
+# Package restore (don’t commit NuGet packages)
+*.nupkg
+*.snupkg
+packages/
+
+# Dependency caches
+.nuget/
+project.lock.json
+project.fragment.lock.json
+
+# Environment files (local dev only, not for Git)
+*.env
+appsettings.Development.json
+appsettings.Local.json
+
+# Publish output
+publish/
+*.PublishSettings
+*.pubxml
+*.publishproj
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.cache
+*.config
+*.pidb
+
+# OS specific
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.swp
+*.DS_Store
