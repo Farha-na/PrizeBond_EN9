@@ -12,7 +12,7 @@ namespace DAL
         public static IServiceCollection AddDAL(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<db_prizebond_DBContext>(options =>
-                    options.UseSqlServer(configuration.GetConnectionString("SchoolConnection")
+                    options.UseSqlServer(configuration.GetConnectionString("PBondConnection")
                     , b => b.MigrationsAssembly("DAL")
                     ));
 

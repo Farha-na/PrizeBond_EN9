@@ -9,6 +9,6 @@ namespace DAL.Interfaces
 {
     public interface IBondOwnedRepository
     {
-        Task<IEnumerable<BondOwned>> GetAll_OwnedBond();
+        Task<IEnumerable<BondOwned>> All_OwnedBond();
     }
 }
