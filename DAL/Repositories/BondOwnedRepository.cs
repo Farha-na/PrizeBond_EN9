@@ -19,7 +19,7 @@ namespace DAL.Repositories
             _context = sclContext;
         }
 
-        public async Task<IEnumerable<BondOwned>> GetAll_OwnedBond()
+        public async Task<IEnumerable<BondOwned>> All_OwnedBond()
         {
             return await _context.BondOwned_instances.ToListAsync();
         }

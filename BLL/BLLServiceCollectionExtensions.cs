@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-
-//using BLL.Interfaces;
+﻿//using BLL.Interfaces;
 using BLL.Services;
 using DAL; // BLL can reference DAL
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using SMS_BLL.Interfaces;
 
 namespace BLL
 {
@@ -15,7 +15,7 @@ namespace BLL
             services.AddDAL(configuration); // internal DAL reference inside BLL
 
             // 2. Register BLL services
-            //services.AddScoped<IStudentService, StudentService>();
+            services.AddScoped<IBondOwnedService, BondOwnedService>();
             //services.AddScoped<IReportService, ReportService>();
             //services.AddScoped<IFrontDeskService, FrontDeskService>();
             //services.AddScoped<IMasterSetupService, MasterSetupService>();
