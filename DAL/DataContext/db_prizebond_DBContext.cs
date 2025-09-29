@@ -18,6 +18,7 @@ public partial class db_prizebond_DBContext : DbContext
     public DbSet<BondOwned> BondOwned_instances { get; set; }
 
     public DbSet<BondWinning> BondWinnings { get; set; }
+    public DbSet<dimtbl_bond_series> BondSeries { get; set; } //entity e tbl name na dile, ekhaner sada name ta table name hbe
 
     //    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.

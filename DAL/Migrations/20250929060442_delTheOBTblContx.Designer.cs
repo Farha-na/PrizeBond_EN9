@@ -3,6 +3,7 @@ using DAL.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DAL.Migrations
 {
     [DbContext(typeof(db_prizebond_DBContext))]
-    partial class db_prizebond_DBContextModelSnapshot : ModelSnapshot
+    [Migration("20250929060442_delTheOBTblContx")]
+    partial class delTheOBTblContx
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -20,25 +23,6 @@ namespace DAL.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("BOL.Entities.BondOwned", b =>
-                {
-                    b.Property<int>("ObId")
-                        .HasColumnType("int")
-                        .HasColumnName("ob_id");
-
-                    b.Property<int>("ObBondNo")
-                        .HasColumnType("int")
-                        .HasColumnName("ob_bond_no");
-
-                    b.Property<int>("ObBondSeries")
-                        .HasColumnType("int")
-                        .HasColumnName("ob_bond_series");
-
-                    b.HasKey("ObId");
-
-                    b.ToTable("bond_owned");
-                });
 
             modelBuilder.Entity("BOL.Entities.BondWinning", b =>
                 {
@@ -70,20 +54,6 @@ namespace DAL.Migrations
                     b.HasKey("WbId");
 
                     b.ToTable("bond_winning");
-                });
-
-            modelBuilder.Entity("BOL.Entities.dimtbl_bond_series", b =>
-                {
-                    b.Property<int>("s_id")
-                        .HasColumnType("int");
-
-                    b.Property<string>("s_series_name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(2)");
-
-                    b.HasKey("s_id");
-
-                    b.ToTable("dimtbl_bond_series");
                 });
 #pragma warning restore 612, 618
         }

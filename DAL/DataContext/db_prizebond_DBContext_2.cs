@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using BOL.Entities;
 
 //using BOL.Entities;
 
@@ -13,7 +14,7 @@ namespace DAL.DataContext
         //    public DbSet<Student> Students { get; set; }
         //    public DbSet<dg_front_desk_inquiry> dg_front_desk_inquiry { get; set; }
 
-        //    public DbSet<dg_ms_class> dg_ms_class { get; set; }
+        //public DbSet<dg_ms_class> dg_ms_class { get; set; }
 
         //    //public DbSet<dg_Complaint> dg_front_desk_complaint { get; set; }
         //    public DbSet<dg_ms_blood_group> dg_ms_blood_group { get; set; }

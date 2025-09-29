@@ -9,18 +9,18 @@ using SMS_BLL.Interfaces;
 
 namespace BLL.Services
 {
-    public class BondOwnedService : IBondOwnedService
+    public class BondDrawService : IBondDrawService
     {
         private readonly IBondOwnedRepository _OB;
 
-        public BondOwnedService(IBondOwnedRepository OB)
+        public BondDrawService(IBondOwnedRepository OB)
         {
             _OB = OB;
         }
 
-        public async Task<IEnumerable<BondOwned>> GetAll_OwnedBond()
-        {
-            return await _OB.All_OwnedBond();
-        }
+        //public async Task<IEnumerable<BondOwned>> GetAll_OwnedBond()
+        //{
+        //    return await _OB.All_OwnedBond();
+        //}
     }
 }

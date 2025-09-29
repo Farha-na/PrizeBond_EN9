@@ -1,0 +1,27 @@
+﻿using BOL.Entities;
+using DAL.DataContext;
+using DAL.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAL.Repositories
+{
+    public class BondDrawRepository : IBondDrawRepository
+    {
+        private readonly db_prizebond_DBContext _context;
+
+        public BondDrawRepository(db_prizebond_DBContext sclContext)
+        {
+            _context = sclContext;
+        }
+
+        //public async Task<IEnumerable<BondOwned>> All_OwnedBond()
+        //{
+        //    return await _context.BondOwned_instances.ToListAsync();
+        //}
+    }
+}

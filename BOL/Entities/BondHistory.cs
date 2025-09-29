@@ -6,17 +6,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BOL.Entities;
 
-[Table("bond_owned")]
-public partial class BondOwned
+[Table("bond_history")]
+public partial class BondHistory
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.None)]
-    [Column("ob_id")]
+    [Column("hb_id")]
     public int ObId { get; set; }
 
-    [Column("ob_bond_series")]
-    public int ObBondSeries { get; set; }
+    [Column("hb_bond_series")]
+    [StringLength(2)]
+    public string ObBondSeries { get; set; }
 
-    [Column("ob_bond_no")]
+    [Column("hb_bond_no")]
     public int ObBondNo { get; set; }
 }
